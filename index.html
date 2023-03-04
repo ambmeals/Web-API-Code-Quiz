@@ -11,27 +11,27 @@
 
   <body>
     <h1>User Score</h1>     
-    <h2 id="timer"></h2>
+    <h2 id="timer">Timer:60</h2>
     <h3 id="quiz-title">Coding Quiz</h3>
     <ul id="quiz-instructions">
-      <ul id="timer"></ul>
-      <li>Try to answer the quiz's questions correctly. There will be a total of 10 questions, all related to what we have learned about HTML, CSS, and JavaScript.</li> 
-      <li>This is a multiple choice test and you will have a total of 2 minutes to complete it.</li>
-    </ul>
+    <h4>There will be a total of 5 questions, all related to what we have learned about HTML, CSS, and JavaScript.
+          This is a multiple choice test and you will have a total of 1 minutes to complete it.</h4>
 
     <button id="start-btn" class="btn">Start Quiz</button>
 
     <form id="quiz-form">
-      <fieldset>
-        <legend>Question 1:</legend>
-        <p>What is JavaScript?</p>
-        <input type="radio" name="q1" value="a"> 1. A scripting language used for creating interactive webpages
-        <input type="radio" name="q1" value="b"> 2. A video game
-        <input type="radio" name="q1" value="c"> 3. An indie movie
-        <input type="radio" name="q1" value="d"> 4. A type of computer
-      </fieldset>
+      <fieldset div class="quiz-Question">
+        <quiz-Question><legend>Question 1:</legend>
+          <p>What is JavaScript?</p>
+          <input type="radio" name="q1" value="a"> 1. A scripting language used for creating interactive webpages
+          <input type="radio" name="q1" value="b"> 2. A video game
+          <input type="radio" name="q1" value="c"> 3. An indie movie
+          <input type="radio" name="q1" value="d"> 4. A type of computer
+        </quiz-Question>
+        </fieldset>
+        
 
-      <fieldset>
+      <fieldset div class="quiz-Question">
         <legend>Question 2:</legend>
         <p>What does CSS stand for?</p>
           <input type="radio" name="q2" value="a"> 1. Cascading Style Sheet
@@ -40,7 +40,7 @@
           <input type="radio" name="q2" value="d"> 4. Child Swinging Sounds
       </fieldset>
 
-      <fieldset>
+      <fieldset div class="quiz-Question">
         <legend>Question 3:</legend>
         <p>What does HTML stand for?</p>
           <input type="radio" name="q3" value="a"> 1. HyperText Markup Language
@@ -49,7 +49,7 @@
           <input type="radio" name="q3" value="d"> 4. HyperText Magic Language
       </fieldset>
 
-      <fieldset>
+      <fieldset div class="quiz-Question">
         <legend>Question 4:</legend>
         <p>What is HTML used for?</p>
           <input type="radio" name="q4" value="a"> 1. Web development
@@ -64,5 +64,5 @@
                 <input type="radio" name="q5" value="c"> 3. Create animations and transitions
                 <input type="radio" name="q5" value="d"> 4. All of the above
                 </fieldset>
-  <button id="submit-btn" class="btn">Submit Answers</button
+  <button id="submit-btn" class="btn2">Submit Answers</button>
 

@@ -6,7 +6,7 @@ var restartBtn = document.getElementById("restart");
 var resultsEl = document.getElementById("results");
 var scoreEl = document.getElementById("score");
 var questionContainers = document.querySelectorAll(".quiz-question");
-var secondsLeft = 120; // Two minute quiz
+var secondsLeft = 60; // one minute quiz
 
 // Function to start the timer
 function startTimer() {
