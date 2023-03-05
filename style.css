@@ -31,6 +31,7 @@ font-size: 40px;
 color: black;
 }
 
+/*Start Quiz Button*/
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   background-color: blueviolet;
@@ -43,6 +44,8 @@ color: black;
   float: center;
 }
 
+/*Submit Answers Button*/
+
 .btn2 {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(0, 0, 0);
@@ -53,3 +56,25 @@ color: black;
   width: 100px;
   height: 100px;  
 }
+/*Restart Button*/
+.btn3 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 100px;
+  height: 100px;  
+}
+/*View User Score Button*/
+.btn4 {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(0, 255, 191);
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 100px;
+  height: 100px;  
+} 

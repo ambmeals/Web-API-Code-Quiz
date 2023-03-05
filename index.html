@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="C:\Users\Ashar\bootcamp\Module Challenges\Web API Code Quiz\node.js">
+    <script src="C:\Users\Ashar\bootcamp\Module Challenges\Web API Code Quiz\node.js"></script>
   </head>
 
   <body>
     <h1>User Score</h1>     
     <h2 id="timer">Timer:60</h2>
     <h3 id="quiz-title">Coding Quiz</h3>
-    <ul id="quiz-instructions">
+    <ul id="quiz-instructions"> </ul>
     <h4>There will be a total of 5 questions, all related to what we have learned about HTML, CSS, and JavaScript.
           This is a multiple choice test and you will have a total of 1 minutes to complete it.</h4>
 
     <button id="start-btn" class="btn">Start Quiz</button>
 
     <form id="quiz-form">
-      <fieldset div class="quiz-Question">
+      <fieldset class="quiz-Question">
         <quiz-Question><legend>Question 1:</legend>
           <p>What is JavaScript?</p>
           <input type="radio" name="q1" value="a"> 1. A scripting language used for creating interactive webpages
@@ -31,7 +31,7 @@
         </fieldset>
         
 
-      <fieldset div class="quiz-Question">
+      <fieldset class="quiz-Question">
         <legend>Question 2:</legend>
         <p>What does CSS stand for?</p>
           <input type="radio" name="q2" value="a"> 1. Cascading Style Sheet
@@ -40,7 +40,7 @@
           <input type="radio" name="q2" value="d"> 4. Child Swinging Sounds
       </fieldset>
 
-      <fieldset div class="quiz-Question">
+      <fieldset class="quiz-Question">
         <legend>Question 3:</legend>
         <p>What does HTML stand for?</p>
           <input type="radio" name="q3" value="a"> 1. HyperText Markup Language
@@ -49,7 +49,7 @@
           <input type="radio" name="q3" value="d"> 4. HyperText Magic Language
       </fieldset>
 
-      <fieldset div class="quiz-Question">
+      <fieldset class="quiz-Question">
         <legend>Question 4:</legend>
         <p>What is HTML used for?</p>
           <input type="radio" name="q4" value="a"> 1. Web development
@@ -57,12 +57,21 @@
           <input type="radio" name="q4" value="c"> 3. Web documentation
             <input type="radio" name="q4" value="d"> 4. All Of The Above
 
-            <Legend>Question 5:</Legend>
+            <legend>Question 5:</legend>
             <p>What Can CSS do?</p>
                 <input type="radio" name="q5" value="a"> 1. Change the color of text and backgrounds
                 <input type="radio" name="q5" value="b"> 2. Control the layout of a webpage
                 <input type="radio" name="q5" value="c"> 3. Create animations and transitions
                 <input type="radio" name="q5" value="d"> 4. All of the above
                 </fieldset>
+
+  <div id="Score" class="Score"></div>
+
   <button id="submit-btn" class="btn2">Submit Answers</button>
 
+  <button id="restart" class="btn3">Restart</button>
+
+  <button id="score" class="btn4">View UserScore</button>
+
+</body>
+</html>
