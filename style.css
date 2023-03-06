@@ -42,6 +42,7 @@ color: black;
   width: 100px;
   height: 100px;
   float: center;
+  padding: 10px; 
 }
 
 /*Submit Answers Button*/
@@ -54,7 +55,8 @@ color: black;
   font-size: 20px;
   border-radius: 25px;
   width: 100px;
-  height: 100px;  
+  height: 100px;
+  padding: 10px;  
 }
 /*Restart Button*/
 .btn3 {
@@ -66,15 +68,21 @@ color: black;
   border-radius: 25px;
   width: 100px;
   height: 100px;  
+  padding: 10px; 
 }
 /*View User Score Button*/
 .btn4 {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(0, 255, 191);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 20px;
   border-radius: 25px;
   width: 100px;
-  height: 100px;  
+  height: 100px;
+  padding: 10px;   
 } 
+
+.p {
+  font-size: 40px
+}

@@ -19,3 +19,42 @@ WHEN the game is over
 THEN I can save my initials and score
 
 ## REMEMBER TO PUT A SCREEN SHOT OF THE FINISHED QUIZ HERE
+
+
+prompt: "What is JavaScript"?,
+    options: [
+      {
+        value: 1. "A scripting language used for creating interactive webpages",
+        isCorrect: true,
+      },
+      {
+        value: "A video game",
+        isCorrect: false,
+      },
+      {
+        value: "An indie movie",
+        isCorrect: false,
+      },
+      {
+        value: "A type of computer"
+      } isCorrect: false,
+    ],
+  },
+  {
+    prompt: "What's my last name?",
+    options: [
+      {
+        value: "Paul",
+        isCorrect: false,
+      },
+      {
+        value: "Martinez",
+        isCorrect: true,
+      },
+      {
+        value: "Jake",
+        isCorrect: false,
+      },
+    ],
+  },
+];
