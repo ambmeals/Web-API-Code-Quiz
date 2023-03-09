@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
     <link rel="stylesheet" href="style.css">
-    <script src="C:\Users\Ashar\bootcamp\Module Challenges\Web API Code Quiz\node.js"></script>
   </head>
 
   <body>
@@ -17,15 +16,17 @@
     <h4>There will be a total of 5 questions, all related to what we have learned about HTML, CSS, and JavaScript.
           This is a multiple choice test and you will have a total of 1 minutes to complete it.</h4>
 
-    <button id="start-btn" class="btn">Start Quiz</button>
+    <button id="start" class="btn">Start Quiz</button>
     <div id="Score" class="Score"></div>
 
-    <button id="submit-btn" class="btn2">Submit Answers</button>
+    <button id="submit" class="btn2">Submit Answers</button>
     <button id="restart" class="btn3">Restart</button>
     <button id="score" class="btn4">User-Score</button>
 
-      <div class="quiz-Question">
-        <legend> <p id="prompt">What is JavaScript?</p></legend>
+      <div id="quiz-question">
+        <legend> 
+          <p id="prompt">What is JavaScript?</p>
+        </legend>
           <div id="question-options">
 
           </div>
@@ -72,8 +73,6 @@
                   <input type="radio" name="q5" value="d"> 4. All of the above
                 </fieldset> -->
            
-
-
   <script src="C:\Users\Ashar\bootcamp\Module Challenges\Web API Code Quiz\node.js"></script>
 </body>
 </html>

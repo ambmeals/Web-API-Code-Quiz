@@ -1,13 +1,14 @@
 var timerEl = document.getElementById("timer");
-var startBtn = document.getElementById("start-btn");
+var startBtn = document.getElementById("start");
 var quizForm = document.getElementById("quiz-form");
 var submitBtn = document.getElementById("submit");
 var restartBtn = document.getElementById("restart");
 var resultsEl = document.getElementById("results");
 var scoreEl = document.getElementById("score");
-var questionContainers = document.querySelectorAll(".quiz-question");
-var secondsLeft = 120; // Two minute quiz
+var questionContainers = document.getElementById("quiz-question");
+var secondsLeft = 60; // Two minute quiz
 var index = 0
+var questionOptions = document.querySelector("#question-options")
 var questionBank = [
   {
     prompt: "What is JavaScript?",
@@ -137,6 +138,7 @@ function showQuestion() {
   var questionElement = document.getElementById("prompt")
   questionElement.innerHTML =  questionBank[index].prompt
   var answersElement = document.getElementById("question-options")
+  answersElement.innerHTML = ""
 for(let i=0; i < questionBank[index].options.length; i++){
   var button = document.createElement("button")
   button.addEventListener("click", checkAnswer)
@@ -149,53 +151,74 @@ for(let i=0; i < questionBank[index].options.length; i++){
   //   container.style.display = "block";
   // });
 }
-
+  // Calculate and display user score
 function checkAnswer(event){
   event.preventDefault()
-  //check if the answer is correct
-
-  // find a way to check if the selected element has the attribute isCorrect to be true
-
-  //if you are not at the last index,
-  // {
-  //   index += 1
-  //   showQuestion()
-  // } else {
-  //   endQuiz()
-  // }
-
+  
+  //var numCorrect = 0;
+  //var userAnswers = new FormData(quizForm);
+ // for (var pair of userAnswers.entries()) {
+   // if (pair[1] === "a") {
+   //   numCorrect++;
+   // }
 
 }
 
-// Function to end the quiz and show results
-function endQuiz() {
-  // Hide quiz form and timer
-  quizForm.style.display = "none";
-  timerEl.style.display = "none";
 
-  // Calculate and display user score
-  var numCorrect = 0;
-  var userAnswers = new FormData(quizForm);
-  for (var pair of userAnswers.entries()) {
-    if (pair[1] === "a") {
-      numCorrect++;
-    }
+ // {
+ //   var scorePercentage = Math.round((numCorrect / 5) * 100);
+//  scoreEl.textContent = "You scored " + scorePercentage + "%";
+ // resultsEl.style.display = "block";
+//  }
+
+
+questionOptions.addEventListener("click", function (event){
+console.log(event.target.getAttribute("isCorrect"))
+index++;
+
+if (index < questionBank.length){
+  if(event.target.getAttribute("isCorrect") === "true"){
+    console.log("IsTrue")
+    var Message = document.createElement("p");
+    Message.textContent = "True"
+    questionContainers.appendChild(Message) 
+  } else {
+    console.log("IsFalse")
+    var Message = document.createElement("p");
+    Message.textContent = "Wrong"
+    Message.removeChild
+    questionContainers.appendChild(Message) 
   }
-  var scorePercentage = Math.round((numCorrect / 5) * 100);
-  scoreEl.textContent = "You scored " + scorePercentage + "%";
-  resultsEl.style.display = "block";
+ 
+  setTimeout:( function (){
+    console.log("Delayed for 1 seconds.");
+  questionContainers.removeChild(Message)
+      showQuestion();
+    }, 1000);
 }
-
+})
 // Event listener for start button click
 startBtn.addEventListener("click", function (event) {
   event.preventDefault()
   // Hide start button and quiz instructions
-  startBtn.style.display = "none";
+  //startBtn.style.display = "none";
   document.getElementById("quiz-instructions").style.display = "none";
 
   // Start timer and show questions
   startTimer();
   index = 0
+  showQuestion();
+});
+
+submitBtn.addEventListener("click", function (event) {
+  event.preventDefault()
+  // Hide start button and quiz instructions
+  submitBtn.style.display = "none";
+  document.getElementById("quiz-instructions").style.display = "none";
+
+  // Start timer and show questions
+  startTimer();
+  index = 1
   showQuestion();
 });
 
@@ -218,3 +241,9 @@ startBtn.addEventListener("click", function (event) {
 //   startBtn.style.display = "block";
 //   document.getElementById("quiz-instructions").style.display = "block";
 // });
+function endQuiz() {
+  // Hide quiz form and timer
+  quizForm.style.display = "none";
+  timerEl.style.display = "none";
+}
+  // Calculate and display use
