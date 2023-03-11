@@ -1,3 +1,17 @@
+const startButton = document.getElementById("start-button");
+const quizScreen = document.getElementById("quiz-screen");
+const questionElement = document.getElementById("question");
+const choicesElement = document.getElementById("choices");
+const endScreen = document.getElementById("end-screen");
+const scoreElement = document.getElementById("score");
+const initialsElement = document.getElementById("initials");
+const submitScoreButton = document.getElementById("submit-score");
+
+let currentQuestionIndex = 0;
+let secondsLeft = 60;
+let score = 0;
+let timerInterval;
+
 const questions = [
   {
     question: "What is JavaScript?",
@@ -51,19 +65,6 @@ const questions = [
   }
 ];
 
-const startButton = document.getElementById("start-button");
-const quizScreen = document.getElementById("quiz-screen");
-const questionElement = document.getElementById("question");
-const choicesElement = document.getElementById("choices");
-const endScreen = document.getElementById("end-screen");
-const scoreElement = document.getElementById("score");
-const initialsElement = document.getElementById("initials");
-const submitScoreButton = document.getElementById("submit-score");
-
-let currentQuestionIndex = 0;
-let secondsLeft = 60;
-let score = 0;
-let timerInterval;
 startButton.addEventListener("click", startQuiz);
 
 function startQuiz() {
